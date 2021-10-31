@@ -1,0 +1,26 @@
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+p {
+  position: absolute;
+  font-size: 30px;
+  top: 50px;
+}
+
+.img-overlay:hover {
+  background: rgba(17, 17, 17, 0.73);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.profile-container {
+  position: relative;
+}
