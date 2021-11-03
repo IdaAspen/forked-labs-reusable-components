@@ -1,7 +1,7 @@
 import React from "react"
 import { Header } from "./components/Header/Header"
 import { Footer } from "./components/Footer/Footer"
-import { ProfileImage } from "components/ProfileImage"
+import { ProfileImage } from "components/ProfileImage/ProfileImage"
 
 export const App = () => {
   return (
