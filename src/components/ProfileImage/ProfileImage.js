@@ -14,29 +14,52 @@ export const ProfileImage = ({ image, name, textColor }) => {
         setIsMouseOver(false)
       }}
     >
-      <Overlay> </Overlay>
       <Profile
         src={image}
         alt="person"
-        style={IsMouseOver ? { opacity: 0.25 } : { opacity: 1 }}
+        // style={IsMouseOver ? { opacity: 0.25 } : { opacity: 1 }}
       />
-      <p style={{ color: textColor }}>{name}</p>
+      <Overlay>
+        <Text style={{ color: textColor }}>
+          <p>{name}</p>
+        </Text>
+      </Overlay>
     </ProfileContainer>
   )
 }
 
-const ProfileContainer = styled.div`
-  position: relative;
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
 `
 
-const Overlay = styled.div`
+const Text = styled.p`
+  display: none;
+`
+
+const ProfileContainer = styled.div`
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 40px;
+
   &:hover {
-    background: rgba(17, 17, 17, 0.73);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    ${Overlay} {
+      background-color: rgba(17, 17, 17, 0.73);
+    }
+    ${Text} {
+      display: flex;
+      text-align: center;
+      position: absolute;
+      top: -45px;
+      left: 40px;
+      font-size: 30px;
+      font-weight: 700;
+    }
   }
 `
 const Profile = styled.img`
@@ -44,10 +67,4 @@ const Profile = styled.img`
   width: 200px;
   height: 200px;
   object-fit: cover;
-`
-
-const text = styled.p`
-  position: absolute;
-  font-size: 30px;
-  top: 50px;
 `
