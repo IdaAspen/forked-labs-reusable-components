@@ -55,8 +55,8 @@ const ProfileContainer = styled.div`
       display: flex;
       text-align: center;
       position: absolute;
-      top: -45px;
-      left: 40px;
+      top: 0px;
+      left: 0px;
       font-size: 30px;
       font-weight: 700;
     }
