@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import './searchBar.css';
 
 const SearchBar = styled.form`
@@ -52,6 +52,8 @@ const Button = styled.button`
   cursor: pointer;
   position: absolute;
   right: 10%;
+  display: inline-block;
+  vertical-align: middle;
 `;
 
 // const SpanButton = styled.span`

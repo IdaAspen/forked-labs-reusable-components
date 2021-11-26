@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 export const Header = ({ title, backgroundColor }) => {
   return (
     <HeaderContainer style={{ backgroundColor: backgroundColor }}>
-      <Circle></Circle>
+      <Circle> </Circle>
       <Container>
         <Navbar>
           <span>about</span>
@@ -14,17 +14,17 @@ export const Header = ({ title, backgroundColor }) => {
       </Container>
       <Title>{title}</Title>
     </HeaderContainer>
-  )
-}
+  );
+};
 const HeaderContainer = styled.header`
   height: 50vh;
   color: #fcfffe;
   overflow: hidden;
-`
+`;
 const Container = styled.div`
   display: flex;
   justify-content: flex-end;
-`
+`;
 const Navbar = styled.nav`
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -33,7 +33,7 @@ const Navbar = styled.nav`
   column-gap: 100px;
   padding: 40px;
   font-size: 20px;
-`
+`;
 const Title = styled.h1`
   font-size: 80px;
   width: 50%;
@@ -41,7 +41,7 @@ const Title = styled.h1`
   z-index: 2;
   position: absolute;
   top: 200px;
-`
+`;
 const Circle = styled.div`
   height: 400px;
   width: 400px;
@@ -52,4 +52,4 @@ const Circle = styled.div`
   top: -60px;
   margin-left: 70px;
   background-color: #dc8722;
-`
+`;
